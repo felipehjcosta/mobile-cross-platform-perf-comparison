@@ -1,6 +1,6 @@
 package sample
 
-import android.support.v7.app.AppCompatActivity
+import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.TextView
 
@@ -12,12 +12,11 @@ actual object Platform {
     actual val name: String = "Android"
 }
 
-class MainActivity : AppCompatActivity() {
+class MainActivity : AppCompatActivity(R.layout.activity_main) {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         Sample().checkMe()
-        setContentView(R.layout.activity_main)
         findViewById<TextView>(R.id.main_text).text = hello()
     }
 }
