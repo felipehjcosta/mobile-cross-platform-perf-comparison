@@ -11,10 +11,13 @@ import UIKit
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
-
-
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        
+        Timer.scheduledTimer(withTimeInterval: 1.0, repeats: true) { _ in
+            print("Total memory of the current process in \(Memory.formattedMemoryFootprint())")
+        }
+        
         return true
     }
 

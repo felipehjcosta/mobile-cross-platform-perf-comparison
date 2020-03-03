@@ -15,6 +15,7 @@
 		D5AA2870240C994600351419 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D5AA286E240C994600351419 /* LaunchScreen.storyboard */; };
 		D5AA287B240C994600351419 /* NativePerfComparisonTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5AA287A240C994600351419 /* NativePerfComparisonTests.swift */; };
 		D5AA2886240C994600351419 /* NativePerfComparisonUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5AA2885240C994600351419 /* NativePerfComparisonUITests.swift */; };
+		D5AA2894240C9A9800351419 /* Memory.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5AA2893240C9A9800351419 /* Memory.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		D5AA2881240C994600351419 /* NativePerfComparisonUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NativePerfComparisonUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D5AA2885240C994600351419 /* NativePerfComparisonUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NativePerfComparisonUITests.swift; sourceTree = "<group>"; };
 		D5AA2887240C994600351419 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D5AA2893240C9A9800351419 /* Memory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Memory.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +101,7 @@
 		D5AA2862240C994400351419 /* NativePerfComparison */ = {
 			isa = PBXGroup;
 			children = (
+				D5AA2893240C9A9800351419 /* Memory.swift */,
 				D5AA2863240C994400351419 /* AppDelegate.swift */,
 				D5AA2865240C994400351419 /* SceneDelegate.swift */,
 				D5AA2867240C994400351419 /* ContentView.swift */,
@@ -267,6 +270,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D5AA2894240C9A9800351419 /* Memory.swift in Sources */,
 				D5AA2864240C994400351419 /* AppDelegate.swift in Sources */,
 				D5AA2866240C994400351419 /* SceneDelegate.swift in Sources */,
 				D5AA2868240C994400351419 /* ContentView.swift in Sources */,
