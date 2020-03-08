@@ -1,4 +1,4 @@
-package com.example.android
+package com.github.felipehjcosta.mobilecrossplatformperfcomparison.native_android
 
 import android.os.*
 
