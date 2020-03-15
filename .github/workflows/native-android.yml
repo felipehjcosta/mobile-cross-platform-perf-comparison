@@ -30,6 +30,7 @@ jobs:
 
       - name: Move google-service.json file
         run: mv ${{ steps.google_services.outputs.filePath }} app/
+        working-directory: ${{ env.working-directory }}
 
       - name: Build with Gradle
         run: ./gradlew build --console=plain
