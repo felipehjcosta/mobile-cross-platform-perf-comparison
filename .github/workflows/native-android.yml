@@ -10,6 +10,8 @@ jobs:
   apk:
 
     runs-on: ubuntu-16.04
+    env:
+      working-directory: ./native/android
 
     steps:
       - uses: actions/checkout@v2
@@ -20,13 +22,15 @@ jobs:
           java-version: 1.8
 
       - name: Build with Gradle
-        run: cd native/android/ && ./gradlew build --console=plain
+        run: ./gradlew build --console=plain
+        working-directory: ${{env.working-directory}}
 
       - name: Upload app APK
         uses: actions/upload-artifact@v1
+        working-directory: ${{env.working-directory}}
         with:
           name: app-release
-          path: native/android/app/build/outputs/apk/release/app-release-unsigned.apk
+          path: app/build/outputs/apk/release/app-release-unsigned.apk
 
   firebase:
     name: Run Robo Tests with Firebase Test Lab
