@@ -12,10 +12,39 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v2
-    - name: set up JDK 1.8
-      uses: actions/setup-java@v1
-      with:
-        java-version: 1.8
-    - name: Build with Gradle
-      run: ./native/android/gradlew build
+      - uses: actions/checkout@v2
+      - name: set up JDK 1.8
+        uses: actions/setup-java@v1
+        with:
+          java-version: 1.8
+      - name: Build with Gradle
+        run: ./native/android/gradlew build
+      - name: Upload app APK
+        uses: actions/upload-artifact@v1
+        with:
+          name: app-release
+          path: /native/android/app/build/outputs/apk/release/app-release-unsigned.apk
+
+  firebase:
+    name: Run Robo Tests with Firebase Test Lab
+    needs: apk
+    runs-on: ubuntu-18.04
+
+    steps:
+      - uses: actions/checkout@v1
+
+      - name: Download app APK
+        uses: actions/download-artifact@v1
+        with:
+          name: app-release
+    - name: Login to Google Cloud
+        uses: GoogleCloudPlatform/github-actions/setup-gcloud@master
+        with:
+          version: '284.0.0'
+          service_account_key: ${{ secrets.GCLOUD_AUTH }}
+
+          - name: Set current project
+            run: gcloud config set project ${{ secrets.FIREBASE_PROJECT_ID }}
+
+          - name: Run Robo Tests in Firebase Test Lab
+            run: gcloud beta firebase test android run --type robo --timeout 3m --device model=walleye,version=28,locale=en_US,orientation=portrait  --app app-release/app-release-unsigned.apk
