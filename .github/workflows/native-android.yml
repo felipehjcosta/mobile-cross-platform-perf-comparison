@@ -20,7 +20,7 @@ jobs:
           java-version: 1.8
 
       - name: Build with Gradle
-        run: ./native/android/gradlew build
+        run: cd native/android/ && ./gradlew build
 
       - name: Upload app APK
         uses: actions/upload-artifact@v1
