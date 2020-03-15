@@ -65,4 +65,4 @@ jobs:
         run: gcloud config set project ${{ secrets.FIREBASE_PROJECT_ID }}
 
       - name: Run Robo Tests in Firebase Test Lab
-        run: gcloud beta firebase test android run --type robo --timeout 3m --device model=walleye,version=28,locale=en_US,orientation=portrait  --app app-release/app-release-unsigned.apk
+        run: gcloud beta firebase test android run --quiet --type robo --timeout 3m --device model=walleye,version=28,locale=en_US,orientation=portrait  --app app-release/app-release-unsigned.apk
