@@ -21,6 +21,15 @@ jobs:
         with:
           java-version: 1.8
 
+      - name: Create google-service.json file
+        uses: timheuer/base64-to-file@v1.0.3
+        with:
+          fileName: 'google-services.json'
+          encodedString: ${{ secrets.GOOGLE_SERVICES_JSON }}
+
+      - name: Move google-service.json file
+        run: mv google-services.json app/
+
       - name: Build with Gradle
         run: ./gradlew build --console=plain
         working-directory: ${{env.working-directory}}
