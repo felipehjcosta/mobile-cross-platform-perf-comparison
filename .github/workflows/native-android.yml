@@ -32,14 +32,13 @@ jobs:
 
       - name: Build with Gradle
         run: ./gradlew build --console=plain
-        working-directory: ${{env.working-directory}}
+        working-directory: ${{ env.working-directory }}
 
       - name: Upload app APK
         uses: actions/upload-artifact@v1
-        working-directory: ${{env.working-directory}}
         with:
           name: app-release
-          path: app/build/outputs/apk/release/app-release-unsigned.apk
+          path: ${{ env.working-directory }}/app/build/outputs/apk/release/app-release-unsigned.apk
 
   firebase:
     name: Run Robo Tests with Firebase Test Lab
