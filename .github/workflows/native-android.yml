@@ -44,7 +44,7 @@ jobs:
 
   native-firebase:
     name: Run Robo Tests with Firebase Test Lab
-    needs: apk
+    needs: native-apk
     runs-on: ubuntu-18.04
 
     steps:
