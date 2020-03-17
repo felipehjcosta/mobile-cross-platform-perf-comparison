@@ -22,14 +22,14 @@ jobs:
           java-version: 1.8
 
       - name: Create google-service.json file
-        id: native_google_services
+        id: google_services
         uses: timheuer/base64-to-file@v1.0.3
         with:
           fileName: 'google-services.json'
           encodedString: ${{ secrets.GOOGLE_SERVICES_JSON }}
 
       - name: Move google-service.json file
-        run: mv ${{ steps.native_google_services.outputs.filePath }} app/
+        run: mv ${{ steps.google_services.outputs.filePath }} app/
         working-directory: ${{ env.working-directory }}
 
       - name: Build with Gradle
@@ -83,16 +83,15 @@ jobs:
       - uses: subosito/flutter-action@v1
         with:
           flutter-version: '1.12.13+hotfix.8'
-
       - name: Create google-service.json file
-        id: flutter_google_services
+        id: google_services
         uses: timheuer/base64-to-file@v1.0.3
         with:
           fileName: 'google-services.json'
           encodedString: ${{ secrets.GOOGLE_SERVICES_JSON }}
 
       - name: Move google-service.json file
-        run: mv ${{ steps.flutter_google_services.outputs.filePath }} android/app/
+        run: mv ${{ steps.google_services.outputs.filePath }} android/app/
         working-directory: ${{ env.working-directory }}
 
       - name: Download Flutter Dependencies
