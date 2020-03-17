@@ -1,4 +1,4 @@
-package com.example.flutter_sample
+package com.github.felipehjcosta.mobilecrossplatformperfcomparison.flutter_android
 
 import io.flutter.app.FlutterApplication
 

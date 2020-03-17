@@ -1,4 +1,4 @@
-package com.example.flutter_sample
+package com.github.felipehjcosta.mobilecrossplatformperfcomparison.flutter_android
 
 import androidx.annotation.NonNull;
 import io.flutter.embedding.android.FlutterActivity
