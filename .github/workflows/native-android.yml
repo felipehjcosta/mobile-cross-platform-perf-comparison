@@ -71,7 +71,7 @@ jobs:
 
     runs-on: ubuntu-16.04
     env:
-      working-directory: ./flutter/android
+      working-directory: ./flutter_sample
 
     steps:
       - uses: actions/checkout@v2
