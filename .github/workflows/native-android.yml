@@ -66,3 +66,43 @@ jobs:
 
       - name: Run Robo Tests in Firebase Test Lab
         run: gcloud -q beta firebase test android run --type robo --timeout 3m --device model=walleye,version=28,locale=en_US,orientation=portrait  --app native-app-release/app-release.apk
+
+  flutter-apk:
+
+    runs-on: ubuntu-16.04
+    env:
+      working-directory: ./flutter/android
+
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: set up JDK 1.8
+        uses: actions/setup-java@v1
+        with:
+          java-version: 1.8
+      - uses: subosito/flutter-action@v1
+        with:
+          flutter-version: '1.12.13+hotfix.8'
+      - name: Create google-service.json file
+        id: google_services
+        uses: timheuer/base64-to-file@v1.0.3
+        with:
+          fileName: 'google-services.json'
+          encodedString: ${{ secrets.GOOGLE_SERVICES_JSON }}
+
+      - name: Move google-service.json file
+        run: mv ${{ steps.google_services.outputs.filePath }} android/app/
+        working-directory: ${{ env.working-directory }}
+
+      - name: Download Flutter Dependencies
+        run: flutter pub get
+
+      - name: Build with Flutter
+        run: flutter build apk
+        working-directory: ${{ env.working-directory }}
+
+      - name: Upload app APK
+        uses: actions/upload-artifact@v1
+        with:
+          name: flutter-app-release
+          path: ${{ env.working-directory }}/build/app/outputs/apk/release/app-release.apk
