@@ -90,6 +90,7 @@ jobs:
           fileName: 'google-services.json'
           encodedString: ${{ secrets.GOOGLE_SERVICES_JSON }}
 
+      - run: ls -la
       - name: Copy google-service.json file
         run: cp ${{ steps.google_services.outputs.filePath }} android/app/
         working-directory: ${{ env.working-directory }}
