@@ -96,6 +96,7 @@ jobs:
 
       - name: Download Flutter Dependencies
         run: flutter pub get
+        working-directory: ${{ env.working-directory }}
 
       - name: Build with Flutter
         run: flutter build apk
