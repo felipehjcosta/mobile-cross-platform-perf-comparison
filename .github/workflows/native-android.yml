@@ -28,8 +28,8 @@ jobs:
           fileName: 'google-services.json'
           encodedString: ${{ secrets.GOOGLE_SERVICES_JSON }}
 
-      - name: Move google-service.json file
-        run: mv ${{ steps.google_services.outputs.filePath }} app/
+      - name: Copy google-service.json file
+        run: cp ${{ steps.google_services.outputs.filePath }} app/
         working-directory: ${{ env.working-directory }}
 
       - name: Build with Gradle
@@ -90,8 +90,8 @@ jobs:
           fileName: 'google-services.json'
           encodedString: ${{ secrets.GOOGLE_SERVICES_JSON }}
 
-      - name: Move google-service.json file
-        run: mv ${{ steps.google_services.outputs.filePath }} android/app/
+      - name: Copy google-service.json file
+        run: cp ${{ steps.google_services.outputs.filePath }} android/app/
         working-directory: ${{ env.working-directory }}
 
       - name: Download Flutter Dependencies
