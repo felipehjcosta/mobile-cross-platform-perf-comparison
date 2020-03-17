@@ -7,7 +7,7 @@ on:
     branches: [ master ]
 
 jobs:
-  apk:
+  native-apk:
 
     runs-on: ubuntu-16.04
     env:
@@ -39,10 +39,10 @@ jobs:
       - name: Upload app APK
         uses: actions/upload-artifact@v1
         with:
-          name: app-release
+          name: native-app-release
           path: ${{ env.working-directory }}/app/build/outputs/apk/release/app-release.apk
 
-  firebase:
+  native-firebase:
     name: Run Robo Tests with Firebase Test Lab
     needs: apk
     runs-on: ubuntu-18.04
@@ -65,4 +65,4 @@ jobs:
         run: gcloud config set project ${{ secrets.FIREBASE_PROJECT_ID }}
 
       - name: Run Robo Tests in Firebase Test Lab
-        run: gcloud -q beta firebase test android run --type robo --timeout 3m --device model=walleye,version=28,locale=en_US,orientation=portrait  --app app-release/app-release.apk
+        run: gcloud -q beta firebase test android run --type robo --timeout 3m --device model=walleye,version=28,locale=en_US,orientation=portrait  --app native-app-release/app-release.apk
