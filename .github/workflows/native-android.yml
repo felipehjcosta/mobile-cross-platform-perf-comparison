@@ -101,7 +101,7 @@ jobs:
         run: yarn install
 
       - name: Build with Gradle
-        run: ls -la . && cd android && ./gradlew assembleRelease --console=plain
+        run: yarn install && ls -la . && cd android && ./gradlew assembleRelease --console=plain
         working-directory: ${{ env.working-directory }}
 
       - name: Upload app APK
