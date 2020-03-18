@@ -92,8 +92,8 @@ jobs:
         run: mv ${{ steps.google_services.outputs.filePath }} android/app/
         working-directory: ${{ env.working-directory }}
 
-      - name: Install npm dependencies
-        run: npm install
+      - name: Install JS dependencies
+        run: yarn install --frozen-lockfile
 
       - name: Build with Gradle
         run: cd android && ./gradlew assembleRelease --console=plain
