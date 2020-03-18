@@ -1,4 +1,4 @@
-package com.reactnative.generated;
+package com.github.felipehjcosta.mobilecrossplatformperfcomparison.reactnative_android.generated;
 
 import java.util.Arrays;
 import java.util.List;

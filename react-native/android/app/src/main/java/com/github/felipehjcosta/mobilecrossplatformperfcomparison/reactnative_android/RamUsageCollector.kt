@@ -1,4 +1,4 @@
-package com.reactnative;
+package com.github.felipehjcosta.mobilecrossplatformperfcomparison.reactnative_android;
 
 import android.os.*
 
