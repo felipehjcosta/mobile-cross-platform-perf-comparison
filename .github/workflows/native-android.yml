@@ -89,7 +89,7 @@ jobs:
           encodedString: ${{ secrets.GOOGLE_SERVICES_JSON }}
 
       - name: Move google-service.json file
-        run: mv ${{ steps.google_services.outputs.filePath }} app/
+        run: mv ${{ steps.google_services.outputs.filePath }} android/app/
         working-directory: ${{ env.working-directory }}
 
       - name: Install npm dependencies
