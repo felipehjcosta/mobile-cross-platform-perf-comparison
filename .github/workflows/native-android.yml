@@ -81,6 +81,11 @@ jobs:
         with:
           java-version: 1.8
 
+      - name: set up Node
+        uses: actions/setup-node@v1
+        with:
+          node-version: 12.x
+
       - name: Create google-service.json file
         id: google_services
         uses: timheuer/base64-to-file@v1.0.3
