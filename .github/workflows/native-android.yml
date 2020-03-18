@@ -93,7 +93,7 @@ jobs:
         working-directory: ${{ env.working-directory }}
 
       - name: Install JS dependencies
-        run: yarn install --frozen-lockfile
+        run: yarn install
 
       - name: Build with Gradle
         run: cd android && ./gradlew assembleRelease --console=plain
