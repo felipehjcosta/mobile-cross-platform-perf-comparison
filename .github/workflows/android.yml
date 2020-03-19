@@ -64,7 +64,8 @@ jobs:
         run: gcloud config set project ${{ secrets.FIREBASE_PROJECT_ID }}
 
       - name: Run Robo Tests in Firebase Test Lab
-        run: gcloud -q beta firebase test android run \
+        run: |
+          gcloud -q beta firebase test android run \
           --type robo \
           --app native-app-release/app-release.apk \
           --timeout 3m \
@@ -139,7 +140,8 @@ jobs:
         run: gcloud config set project ${{ secrets.FIREBASE_PROJECT_ID }}
 
       - name: Run Robo Tests in Firebase Test Lab
-        run: gcloud -q beta firebase test android run \
+        run: |
+          gcloud -q beta firebase test android run \
           --type robo \
           --app react-native-app-release/app-release.apk \
           --timeout 3m \
@@ -212,7 +214,8 @@ jobs:
         run: gcloud config set project ${{ secrets.FIREBASE_PROJECT_ID }}
 
       - name: Run Robo Tests in Firebase Test Lab
-        run: gcloud -q beta firebase test android run \
+        run: |
+          gcloud -q beta firebase test android run \
           --type robo \
           --app flutter-app-release/app-release.apk \
           --timeout 3m \
