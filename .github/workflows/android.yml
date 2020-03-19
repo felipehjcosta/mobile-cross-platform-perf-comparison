@@ -43,7 +43,6 @@ jobs:
           path: ${{ env.working-directory }}/app/build/outputs/apk/release/app-release.apk
 
   native-firebase:
-    name: Run Robo Tests with Firebase Test Lab
     needs: native-apk
     runs-on: ubuntu-18.04
 
@@ -111,7 +110,6 @@ jobs:
           path: ${{ env.working-directory }}/android/app/build/outputs/apk/release/app-release.apk
 
   react-native-firebase:
-    name: Run Robo Tests with Firebase Test Lab
     needs: react-native-apk
     runs-on: ubuntu-18.04
 
@@ -177,7 +175,6 @@ jobs:
           path: ${{ env.working-directory }}/build/app/outputs/apk/release/app-release.apk
 
   flutter-firebase:
-    name: Run Robo Tests with Firebase Test Lab
     needs: flutter-apk
     runs-on: ubuntu-18.04
 
