@@ -64,7 +64,15 @@ jobs:
         run: gcloud config set project ${{ secrets.FIREBASE_PROJECT_ID }}
 
       - name: Run Robo Tests in Firebase Test Lab
-        run: gcloud -q beta firebase test android run --type robo --timeout 3m --device model=walleye,version=28,locale=en_US,orientation=portrait  --app native-app-release/app-release.apk
+        run: gcloud -q beta firebase test android run \
+          --type robo \
+          --app native-app-release/app-release.apk \
+          --timeout 3m \
+          --device model=walleye,version=28,locale=en_US,orientation=portrait \
+          --device model=zeroflte,version=23,locale=en,orientation=portrait  \
+          --device model=j1acevelte,version=22,locale=en,orientation=portrait  \
+          --device model=harpia,version=23,locale=en,orientation=portrait  \
+          --device model=hammerhead,version=21,locale=en,orientation=portrait
 
   react-native-apk:
 
@@ -131,7 +139,15 @@ jobs:
         run: gcloud config set project ${{ secrets.FIREBASE_PROJECT_ID }}
 
       - name: Run Robo Tests in Firebase Test Lab
-        run: gcloud -q beta firebase test android run --type robo --timeout 3m --device model=walleye,version=28,locale=en_US,orientation=portrait  --app react-native-app-release/app-release.apk
+        run: gcloud -q beta firebase test android run \
+          --type robo \
+          --app react-native-app-release/app-release.apk \
+          --timeout 3m \
+          --device model=walleye,version=28,locale=en_US,orientation=portrait \
+          --device model=zeroflte,version=23,locale=en,orientation=portrait  \
+          --device model=j1acevelte,version=22,locale=en,orientation=portrait  \
+          --device model=harpia,version=23,locale=en,orientation=portrait  \
+          --device model=hammerhead,version=21,locale=en,orientation=portrait
 
   flutter-apk:
 
@@ -196,4 +212,12 @@ jobs:
         run: gcloud config set project ${{ secrets.FIREBASE_PROJECT_ID }}
 
       - name: Run Robo Tests in Firebase Test Lab
-        run: gcloud -q beta firebase test android run --type robo --timeout 3m --device model=walleye,version=28,locale=en_US,orientation=portrait  --app flutter-app-release/app-release.apk
+        run: gcloud -q beta firebase test android run \
+          --type robo \
+          --app flutter-app-release/app-release.apk \
+          --timeout 3m \
+          --device model=walleye,version=28,locale=en_US,orientation=portrait \
+          --device model=zeroflte,version=23,locale=en,orientation=portrait  \
+          --device model=j1acevelte,version=22,locale=en,orientation=portrait  \
+          --device model=harpia,version=23,locale=en,orientation=portrait  \
+          --device model=hammerhead,version=21,locale=en,orientation=portrait
