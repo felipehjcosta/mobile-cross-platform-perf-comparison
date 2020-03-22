@@ -4,7 +4,9 @@ import app
 class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
-        label.text = Proxy().proxyHello()
+        Proxy().proxyCountDown { text in
+            self.label.text = text
+        }
     }
 
     override func didReceiveMemoryWarning() {
