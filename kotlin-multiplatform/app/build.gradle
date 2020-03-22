@@ -38,27 +38,16 @@ dependencies {
 
 kotlin {
     android()
-    def isDevice = System.getenv("SDK_NAME")?.startsWith("iphoneos") == true
-    final def iOSTarget = System.getenv('SDK_NAME')?.startsWith("iphoneos")   \
-                                ? presets.getByName("iosArm64") : presets.getByName("iosX64")
-//    println(">>> iOSTarget: $iOSTarget")
-    targetFromPreset(iOSTarget, "ios") {
-        binaries {
-            framework()
+    targets {
+        final def iOSTarget = System.getenv('SDK_NAME')?.startsWith("iphoneos")  \
+                               ? presets.iosArm64 : presets.iosX64
+
+        fromPreset(iOSTarget, 'ios') {
+            binaries {
+                framework()
+            }
         }
     }
-//    targets {
-//        final def iOSTarget = System.getenv('SDK_NAME')?.startsWith("iphoneos")  \
-//                               ? presets.iosArm64 : presets.iosX64
-//
-//        fromPreset(iOSTarget, 'ios') {
-//            binaries {
-//                framework()
-//            }
-//        }
-//
-//        fromPreset(presets.android, 'android')
-//    }
     sourceSets {
         commonMain {
             dependencies {
