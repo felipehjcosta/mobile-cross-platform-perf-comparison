@@ -234,3 +234,7 @@ fastlane/test_output
 iOSInjectionProject/
 
 .DS_Store
+
+# Firebase
+
+app/google-services.json
