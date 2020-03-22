@@ -257,7 +257,7 @@ jobs:
       - name: Upload app APK
         uses: actions/upload-artifact@v1
         with:
-          name: kotlinmultiplatform-app-release
+          name: kotlin-multiplatform-app-release
           path: ${{ env.working-directory }}/app/build/outputs/apk/release/app-release.apk
 
   kotlin-multiplatform-firebase:
