@@ -6,7 +6,7 @@ import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
 
-class CountDown {
+class Timer {
     fun start(block: (String) -> Unit) {
         GlobalScope.launch(Dispatchers.Main) {
             val startTime = DateTime.nowUnixLong()

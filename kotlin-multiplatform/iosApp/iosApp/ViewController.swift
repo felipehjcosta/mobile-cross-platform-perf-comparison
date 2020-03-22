@@ -4,7 +4,7 @@ import app
 class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
-        CountDown().start { text in
+        Timer().start { text in
             self.label.text = text
         }
     }
