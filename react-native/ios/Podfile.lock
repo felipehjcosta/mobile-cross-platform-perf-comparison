@@ -251,6 +251,7 @@ PODS:
     - React
   - RNScreens (2.0.0-beta.13):
     - React
+  - SwiftMonkey (2.1.1)
   - UMBarCodeScannerInterface (5.0.0)
   - UMCameraInterface (5.0.0)
   - UMConstantsInterface (5.0.0)
@@ -310,6 +311,7 @@ DEPENDENCIES:
   - RNGestureHandler (from `../node_modules/react-native-gesture-handler/RNGestureHandler.podspec`)
   - RNReanimated (from `../node_modules/react-native-reanimated/RNReanimated.podspec`)
   - RNScreens (from `../node_modules/react-native-screens`)
+  - SwiftMonkey (from `https://github.com/zalando/SwiftMonkey.git`, commit `68f49bb69381103224b0e77ab615baac8b1fd750`)
   - UMBarCodeScannerInterface (from `../node_modules/unimodules-barcode-scanner-interface/ios`)
   - UMCameraInterface (from `../node_modules/unimodules-camera-interface/ios`)
   - UMConstantsInterface (from `../node_modules/unimodules-constants-interface/ios`)
@@ -416,6 +418,9 @@ EXTERNAL SOURCES:
     :podspec: "../node_modules/react-native-reanimated/RNReanimated.podspec"
   RNScreens:
     :path: "../node_modules/react-native-screens"
+  SwiftMonkey:
+    :commit: 68f49bb69381103224b0e77ab615baac8b1fd750
+    :git: https://github.com/zalando/SwiftMonkey.git
   UMBarCodeScannerInterface:
     :path: !ruby/object:Pathname
     path: "../node_modules/unimodules-barcode-scanner-interface/ios"
@@ -454,6 +459,11 @@ EXTERNAL SOURCES:
     path: "../node_modules/unimodules-task-manager-interface/ios"
   Yoga:
     :path: "../node_modules/react-native/ReactCommon/yoga"
+
+CHECKOUT OPTIONS:
+  SwiftMonkey:
+    :commit: 68f49bb69381103224b0e77ab615baac8b1fd750
+    :git: https://github.com/zalando/SwiftMonkey.git
 
 SPEC CHECKSUMS:
   boost-for-react-native: 39c7adb57c4e60d6c5479dd8623128eb5b3f0f2c
@@ -495,6 +505,7 @@ SPEC CHECKSUMS:
   RNGestureHandler: 911d3b110a7a233a34c4f800e7188a84b75319c6
   RNReanimated: b2ab0b693dddd2339bd2f300e770f6302d2e960c
   RNScreens: ba539a5086136eb356e43699cb588a80369763ca
+  SwiftMonkey: 2930564fb57ea6bcffaa60353e59ca61f3aa1192
   UMBarCodeScannerInterface: 3802c8574ef119c150701d679ab386e2266d6a54
   UMCameraInterface: 985d301f688ed392f815728f0dd906ca34b7ccb1
   UMConstantsInterface: bda5f8bd3403ad99e663eb3c4da685d063c5653c
@@ -509,6 +520,6 @@ SPEC CHECKSUMS:
   UMTaskManagerInterface: a98e37a576a5220bf43b8faf33cfdc129d2f441d
   Yoga: f2a7cd4280bfe2cca5a7aed98ba0eb3d1310f18b
 
-PODFILE CHECKSUM: 68fbc83c4e69a74ff94322067c0973bc1db16c80
+PODFILE CHECKSUM: 6598181c2c5062f59a64ea2d1b71910ed29144a1
 
 COCOAPODS: 1.8.0

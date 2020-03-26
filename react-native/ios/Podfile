@@ -44,3 +44,7 @@ target 'ReactNative' do
   # Automatically detect installed unimodules
   use_unimodules!
 end
+
+target 'ReactNativeUITests' do
+    pod 'SwiftMonkey', :git => 'https://github.com/zalando/SwiftMonkey.git', :commit => '68f49bb69381103224b0e77ab615baac8b1fd750'
+end
