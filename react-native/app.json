@@ -1,6 +1,6 @@
 {
   "expo": {
-    "name": "Blank Template",
+    "name": "ReactNative",
     "slug": "react-native",
     "privacy": "public",
     "sdkVersion": "36.0.0",
@@ -28,6 +28,6 @@
     },
     "entryPoint": "node_modules/expo/AppEntry.js"
   },
-  "displayName": "Blank Template",
+  "displayName": "ReactNative",
   "name": "ReactNative"
 }
