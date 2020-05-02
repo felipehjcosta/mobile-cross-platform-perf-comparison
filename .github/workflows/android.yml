@@ -71,7 +71,6 @@ jobs:
           --timeout 3m \
           --device model=walleye,version=28,locale=en_US,orientation=portrait \
           --device model=zeroflte,version=23,locale=en,orientation=portrait  \
-          --device model=j1acevelte,version=22,locale=en,orientation=portrait  \
           --device model=harpia,version=23,locale=en,orientation=portrait  \
           --device model=hammerhead,version=21,locale=en,orientation=portrait
 
@@ -147,7 +146,6 @@ jobs:
           --timeout 3m \
           --device model=walleye,version=28,locale=en_US,orientation=portrait \
           --device model=zeroflte,version=23,locale=en,orientation=portrait  \
-          --device model=j1acevelte,version=22,locale=en,orientation=portrait  \
           --device model=harpia,version=23,locale=en,orientation=portrait  \
           --device model=hammerhead,version=21,locale=en,orientation=portrait
 
@@ -221,7 +219,6 @@ jobs:
           --timeout 3m \
           --device model=walleye,version=28,locale=en_US,orientation=portrait \
           --device model=zeroflte,version=23,locale=en,orientation=portrait  \
-          --device model=j1acevelte,version=22,locale=en,orientation=portrait  \
           --device model=harpia,version=23,locale=en,orientation=portrait  \
           --device model=hammerhead,version=21,locale=en,orientation=portrait
 
@@ -289,6 +286,5 @@ jobs:
           --timeout 3m \
           --device model=walleye,version=28,locale=en_US,orientation=portrait \
           --device model=zeroflte,version=23,locale=en,orientation=portrait  \
-          --device model=j1acevelte,version=22,locale=en,orientation=portrait  \
           --device model=harpia,version=23,locale=en,orientation=portrait  \
           --device model=hammerhead,version=21,locale=en,orientation=portrait
