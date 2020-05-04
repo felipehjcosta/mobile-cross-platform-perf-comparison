@@ -1,13 +1,13 @@
-package com.github.felipehjcosta.mobilecrossplatformperfcomparison.flutter_android
+package com.github.felipehjcosta.mobilecrossplatformperfcomparison.kotlinmultiplatform_android
 
-import io.flutter.app.FlutterApplication
+import android.app.Application
 import com.github.felipehjcosta.perf.PerformanceTracker
 import com.github.felipehjcosta.perf.console.logging
 import com.github.felipehjcosta.perf.firebase.firebaseDelivery
 import com.github.felipehjcosta.perf.with
 import com.google.firebase.analytics.FirebaseAnalytics
 
-class MainApplication : FlutterApplication() {
+class MainApplication : Application() {
 
     override fun onCreate() {
         super.onCreate()

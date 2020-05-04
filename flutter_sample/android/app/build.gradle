@@ -41,7 +41,7 @@ android {
     defaultConfig {
         // TODO: Specify your own unique Application ID (https://developer.android.com/studio/build/application-id.html).
         applicationId "com.github.felipehjcosta.mobilecrossplatformperfcomparison.flutter_android"
-        minSdkVersion 16
+        minSdkVersion 21
         targetSdkVersion 28
         versionCode flutterVersionCode.toInteger()
         versionName flutterVersionName
@@ -65,9 +65,14 @@ flutter {
 
 dependencies {
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+
     implementation platform('com.google.firebase:firebase-bom:25.0.0')
     implementation 'com.google.firebase:firebase-analytics'
     implementation 'com.google.firebase:firebase-perf'
+
+    implementation 'com.github.felipehjcosta:app-performance-tracker-core:0.3.0'
+    implementation 'com.github.felipehjcosta:app-performance-tracker-firebase:0.3.0'
+
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'androidx.test:runner:1.1.1'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.1.1'

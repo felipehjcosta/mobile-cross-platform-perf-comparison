@@ -42,6 +42,9 @@ dependencies {
     implementation 'com.google.firebase:firebase-analytics'
     implementation 'com.google.firebase:firebase-perf'
 
+    implementation 'com.github.felipehjcosta:app-performance-tracker-core:0.3.0'
+    implementation 'com.github.felipehjcosta:app-performance-tracker-firebase:0.3.0'
+
     androidTestImplementation 'androidx.test:runner:1.2.0'
 }
 

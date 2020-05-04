@@ -56,7 +56,7 @@ public class MainApplication extends Application implements ReactApplication {
     @Override
     public void onCreate() {
         super.onCreate();
-        new RamUsageCollector();
+        AppPerformanceTrackerUtils.initialize(this);
         SoLoader.init(this, /* native exopackage */ false);
     }
 }
