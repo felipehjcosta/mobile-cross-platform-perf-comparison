@@ -170,8 +170,8 @@ dependencies {
     implementation 'com.google.firebase:firebase-analytics'
     implementation 'com.google.firebase:firebase-perf'
 
-    implementation 'com.github.felipehjcosta:app-performance-tracker-core:0.3.0'
-    implementation 'com.github.felipehjcosta:app-performance-tracker-firebase:0.3.0'
+    implementation 'com.github.felipehjcosta:app-performance-tracker-core:0.3.1'
+    implementation 'com.github.felipehjcosta:app-performance-tracker-firebase:0.3.1'
 }
 
 // Run this once to be able to run the application with BUCK
